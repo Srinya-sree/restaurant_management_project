@@ -1,0 +1,47 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+/*Header*/
+.header{
+    background-color: #4A90E2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/*Main content*/
+.content{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+/*Tags/Badges*/
+.tags{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.badge{
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.badge.pending{
+    background-color: #5b9bd5;
+    color: white;
+}
+.badge.date{
+    background-color: #f4cccc;
+    color: #a94442;
+}
+/*paragraphs*/
+p{
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
