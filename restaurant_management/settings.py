@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'home',
     'account',
@@ -45,7 +44,7 @@ INSTALLED_APPS = [
     'orders',
 ]
 #custom project settings
-RESTAURANT_NAME = "Tasty Bites"
+restaurant_name = "Tasty Bites"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
