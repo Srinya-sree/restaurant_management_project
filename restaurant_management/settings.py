@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'products',
     'orders',
 ]
-#custom project settings
-restaurant_name = "Tasty Bites"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
