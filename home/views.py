@@ -1,8 +1,10 @@
-from django.conf import settings
 from django.shortcuts import render
+def menu_items_view(request):
+    menu_items=[
+        {'name':'pizza','price':10.99},
+        {'name':'Burger','price':7.99},
+        {'name':'Salad','price':5.99},
+        {'name':'Pasta','price':8.99},
 
-def home_view(request):
-    restaurant_name = getattr(settings, 'RESTAURANT_NAME', 'My Restaurant')
-    return render(request, 'home.html',{'restaurant_name': restaurant_name})
-def about_view(request):
-    return render(request, 'about.html')
+    ]
+    return render(request,'MENU_ITEMS.html',{'MENU_ITEMS':MENU_ITEMS})
