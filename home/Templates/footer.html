@@ -6,35 +6,39 @@
     <title>Page with Footer</title>
     <style>
         body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        main{
-        flex: 1;
-        padding: 20px;
+        main {
+            flex: 1;
+            padding: 20px;
         }
-        footer{
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 14px;
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
+
     <main>
         <h1>Welcome to Our Website</h1>
         <p>Page content goes here...</p>
     </main>
+
     <footer>
-        &copy; <span id="year"></span>Your Restaurant Name. All rights reserved.
+        &copy; <span id="year"></span> Your Restaurant Name. All rights reserved.
     </footer>
+
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
 </body>
 </html>
