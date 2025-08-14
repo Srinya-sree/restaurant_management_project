@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             body {
-                font-family: 'Segoe UI',sans-serif;
+                font-family: 'Segoe UI', sans-serif;
                 background-color: #f8f9fa;
             }
             .hero {
@@ -15,6 +15,11 @@
                 padding: 60px;
                 border-radius: 15px;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+            .logo {
+                max-width: 200px;
+                height: auto;
+                margin-bottom: 20px;
             }
             h1 {
                 font-weight: 700;
@@ -29,14 +34,20 @@
 
 <div class="container mt-5">
     <div class="hero text-center">
+        <!-- Restaurant Logo with Direct Link -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/512px-No_image_available.svg.png" 
+             alt="Tasty Bites Logo" class="logo">
+
         <h1>Welcome to Tasty Bites</h1>
-        <p>This is a modern, clean homepage built with Bootstarp.</p>
-        <a href="{% url 'some_view' %}" class="btn btn-primary mt-3">Get Started</a>
+        <p>This is a modern, clean homepage built with Bootstrap.</p>
+        <a href="some_view.html" class="btn btn-primary mt-3">Get Started</a>
     </div>
 </div>
-<nav>
-    <a href="{% url 'home' %}">Home</a>|
-    <a href="{% url 'about' %}">About</a>
+
+<nav class="mt-4 text-center">
+    <a href="home.html">Home</a> |
+    <a href="about.html">About</a>
 </nav>
+
 </body>
 </html>
