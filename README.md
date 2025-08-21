@@ -1,0 +1,1 @@
+This project is a Restaurant Management System built with Django. It helps restaurant owners and staff manage menus, orders, and customers efficiently. The system provides APIs and a simple frontend to handle restaurant operations.
