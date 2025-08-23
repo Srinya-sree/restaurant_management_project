@@ -1,15 +1,16 @@
+from django.conf import settings
 from django.shortcuts import render
-def menu_items_view(request):
-    try:
-        menu_items=[
-            {'name':'pizza','price':10.99},
-            {'name':'Burger','price':7.99},
-            {'name':'Salad','price':5.99},
-            {'name':'Pasta','price':8.99},
-        ]
-        return render(request,'MENU_ITEMS.html',{'MENU_ITEMS':MENU_ITEMS})
-    except DatabaseError as e:
-        print(f"Database error:{e}")
-        return HttpResponse("Sorry, we are experiencing technical issues. Please try again.",status=500)
-        print(f"Unexpected error:{e}")
-        return HttpResponse("An unexpected error.",status=500)
+
+def home_view(request):
+    restaurant_name = getattr(settings, 'RESTAURANT_NAME', 'My Restaurant')
+    return render(request, 'home.html',{'restaurant_name': restaurant_name})
+def about_view(request):
+    return render(request, 'about.html')
+def home(request):
+    api_url = "http://127.0.0.1:8000/api/menu/"
+try:
+    response = requests.get(api_url)
+    menu_items=response.json()
+except:
+    menu_items=[]
+    return render(request,"home.html",{"menu_items":menu_items})
