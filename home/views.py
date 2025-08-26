@@ -7,7 +7,11 @@ def home_view(request):
 def about_view(request):
     return render(request, 'about.html')
 def home(request):
+    context={
+        "restaurant_name":settings.RESTAURANT_NAME
+    }
     api_url = "http://127.0.0.1:8000/api/menu/"
+    return render(request,"home.html",context)
 try:
     response = requests.get(api_url)
     menu_items=response.json()
