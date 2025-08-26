@@ -18,3 +18,6 @@ try:
 except:
     menu_items=[]
     return render(request,"home.html",{"menu_items":menu_items})
+def menu_page(request):
+    items = Menu.objects.all()
+    return render(request,"menu.html",{"items":items})
