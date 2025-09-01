@@ -27,3 +27,7 @@ class RestaurantLocation(models.Model):
     def __str__(self):
         return f"{self.address},{self.city},{self.state}{self.zip_code}"
 
+    def homepage(request):
+        items = MenuItem.objects.all()
+        return render(request,"homepage.html",{"items":items})
+
