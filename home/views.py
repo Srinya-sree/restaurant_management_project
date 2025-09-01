@@ -1,6 +1,7 @@
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import Form
+form .forms import ContactForm
 def home_view(request):
     restaurant_name = getattr(settings, 'RESTAURANT_NAME', 'My Restaurant')
     return render(request, 'home.html',{'restaurant_name': restaurant_name})
@@ -30,3 +31,13 @@ except:
 def menu_page(request):
     items = Menu.objects.all()
     return render(request,"menu.html",{"items":items})
+
+def contact_view(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('contact')
+    else:
+        form = ContactForm()
+    return render(request,'contact.html',{'form':form})
